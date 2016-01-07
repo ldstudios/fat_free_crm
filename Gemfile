@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
 # Uncomment the database that you have configured in config/database.yml
 # ----------------------------------------------------------------------
@@ -70,9 +71,10 @@ group :test do
   gem 'timecop'
 end
 
-group :heroku do
+group :production do
   gem 'unicorn', platform: :ruby
   gem 'rails_12factor'
+  gem 'newrelic_rpm'
 end
 
 gem 'sass-rails'
